@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Seenit</string>
+    <string name="search">Search Subreddits</string>
+    <string name="channels_list">More Channels</string>
+    <string name="videos_list">Videos in </string>
+    <string name="login">Tap to Login</string>
+    <string name="subredditSearch">Subreddit Search</string>
+    <string name="topicSearch">Search by topic or interest...</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="emptyVideosPrompt">No videos found in</string>
+    <string name="filterEmptiesPrompt">Don\'t list channels without videos?</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="is_def_chan">Added to Default Channels</string>
+    <string name="not_def_chan">Removed from Default Channels</string>
+    <string name="exit">Exit</string>
+    <string name="logout">Log Out</string>
+    <string name="login_short">Login</string>
+    <string name="close_login">Close</string>
+    <string name="welcome">Welcome to </string>
+    <string name="logged_in_as">Currently logged in as </string>
+    <string name="search_help">Search for subreddits by clicking on the magnifying glass. The search will find videos posted to reddit.com/r/<i>subreddit</i>, where <i>subreddit</i> is the provided search term. A search for "cats" gets videos from the cats subreddit at reddit.com/r/cats.</string>
+	<string name="subreddits_help">Use the subreddits list to browse videos related to specific topics. Tap a name to get an updated list of videos from that subreddit.</string>
+	<string name="prev_next_help">Tap \u25c2\u2759 or \u2759\u25b8 to play the previous or next video.</string>
+	<string name="vote_help">Tap UP or DOWN to vote a video up or down. Voting is only possible after logging in.</string>
+	<string name="login_help">Tap on <b>%1$s</b> to log in with a reddit account. Logging in will automatically import all subreddit subscriptions from the account. After logging in, videos can be voted up or down.</string>
+	<string name="default_channel_help">A \u2605\'d subreddit will be saved to </string>
+	<string name="remove_prompt">Remove %1$s?</string>
+	
+    <string name="loading_video">Loading video</string>
+    
+    </resources>

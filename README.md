@@ -1,2 +1,1 @@
-seenit
-======
+Use seenit to watch videos from reddit.com on your Android device.

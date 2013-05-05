@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!-- style="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" > -->
+
+    <com.mmcmahon.rtv2go.VideoInterface
+        android:id="@+id/lsifaceClickables"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" >
+
+      
+        <!-- LOGIN -->
+
+        <LinearLayout
+            android:id="@+id/lsifaceLoginWrapper"
+		    android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/lsifaceThumbTitle"
+            android:layout_toLeftOf="@+id/lsifaceBtns"
+            android:layout_below="@+id/lsifaceTopPanel"
+            android:orientation="horizontal">
+            
+
+            <com.mmcmahon.rtv2go.ui.PullOut
+                android:id="@+id/lsifaceLoginDrawer"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:content="@+id/lsifaceLoginContent"
+                android:handle="@+id/lsifaceLoginHandle"
+                android:orientation="horizontal">
+
+                <com.mmcmahon.rtv2go.ui.VerticalButton
+                    android:id="@+id/lsifaceLoginHandle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="bottom|center"
+                    android:text="@string/login"
+                    android:textColor="@android:color/white"
+                    android:background="@color/IFACE_BG"
+                    android:textStyle="bold|italic" 
+                    android:textSize="18sp"
+                    android:paddingTop="6dp"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/lsifaceLoginContent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/IFACE_BG"
+                    >
+                <LinearLayout
+                        android:id="@+id/lsifaceLoginViews"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical"
+                        android:layout_toRightOf="@+id/lsifaceLoginLoading"
+                        android:layout_alignWithParentIfMissing="true"
+                        android:layout_toLeftOf="@+id/lsifaceLoginBtn"
+                            >
+
+                        <EditText
+                            android:id="@+id/lsifaceUsername"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_weight="1"
+                            android:textColor="#ffffff"
+                            android:hint="@string/username"
+                            android:padding="3dp"
+                            android:textColorHint="#a0ffffff"
+                            android:background="@color/IFACE_BG_TRLU"
+                        android:layout_marginBottom="2dp" />
+
+                        <EditText
+                            android:id="@+id/lsifacePassword"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="#ffffff"
+                            android:hint="@string/password"
+                            android:inputType="textPassword"
+                            android:padding="3dp"
+                            android:textColorHint="#a0ffffff"
+                            android:background="@color/IFACE_BG_TRLU" />"
+                        </LinearLayout>
+                        <!-- Login Button with Boarder 
+                        <View
+                            android:layout_height="fill_parent"
+                            android:layout_width="2dp"
+                            android:layout_toRightOf="@+id/lsifaceLoginViews"
+                            android:background="#ffffff"/>
+                        <View 
+                            android:id="@+id/loginBtnRight"
+                            android:layout_height="fill_parent"
+                            android:layout_width="1dp"
+                            android:layout_alignParentRight="true"
+                            android:background="#ffffff"/>"
+                        <View
+                            android:layout_height="1dp" 
+                            android:layout_width="fill_parent" 
+                            android:layout_alignLeft="@+id/lsifaceLoginBtn"
+                            android:layout_alignParentTop="true"
+                            android:background="#ffffff"/>
+                        <View
+                            android:layout_height="1dp"
+                            android:layout_width="fill_parent"
+                            android:layout_alignLeft="@+id/lsifaceLoginBtn"
+                            android:layout_alignParentBottom="true"
+                            android:background="#ffffff"/-->
+                            
+                        <ProgressBar 
+                            android:id="@+id/lsifaceLoginLoading"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:padding="2dp"
+                            android:gravity="center"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:visibility="gone"
+                            />
+                        
+                            <!-- LoginButton -->
+                        <TextView
+                            android:id="@+id/lsifaceLoginBtn"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:gravity="center"
+                            android:text="@string/login_short"
+                            android:textColor="@android:color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:background="@drawable/white_circle"
+                            android:padding="2dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            />
+                        <!-- /LoginButton -->"
+                    </RelativeLayout>
+            </com.mmcmahon.rtv2go.ui.PullOut>
+        </LinearLayout>
+         <!--/LOGIN -->
+        
+        <!-- NO VIDEOS VIEWS -->
+        <RelativeLayout
+            android:id="@+id/playerNoVideosViews"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/black"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/playerEmptyPrompt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/emptyVideosPrompt"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/playerFilterPrompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/playerEmptyPrompt"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/filterEmptiesPrompt"
+                android:textSize="15sp" />
+
+            <CheckBox
+                android:id="@+id/playerFilterCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/playerFilterPrompt"
+                android:layout_toRightOf="@+id/playerFilterPrompt" />
+        </RelativeLayout>
+        <!-- /NO VIDEOS VIEW -->
+
+
+        <!-- RIGHT SIDE BUTTONS -->
+
+        <LinearLayout
+            android:id="@+id/lsifaceBtns"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:background="#a0000000"
+            android:gravity="center_vertical|fill_vertical"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/lsifacePrev"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="top"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:paddingBottom="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/prev_icon5" />
+
+            <!-- Reddit Vote Buttons -->
+
+            <ImageButton
+                android:id="@+id/lsifaceUp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:paddingBottom="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/up_icon6"/>
+            <TextView 
+                android:id="@+id/lsifaceScore"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="score"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                />
+
+            <ImageButton
+                android:id="@+id/lsifaceDown"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:paddingBottom="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/down_icon5"/>
+
+            <ImageButton
+                android:id="@+id/lsifaceNext"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:paddingBottom="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/next_icon8" />
+        </LinearLayout>
+        <!-- /RIGHT SIDE BUTTONS -->
+
+
+        <!-- Channels and Videos lists in sliding drawers -->
+        <!--
+   <LinearLayout
+            android:id="@+id/lsifaceChannelPanel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true" 
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true">
+        </LinearLayout>
+        -->
+
+
+<!-- Top Panel -->
+<RelativeLayout 
+    android:id="@+id/lsifaceTopPanel"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/lsifaceBtns"
+            >
+        <!-- SEARCH BUTTON -->
+
+        <ImageButton
+            android:id="@+id/sboxSearchBtn"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@+id/lsifaceChannels"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/SEARCH_GREEN"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/search_icon" />
+        <!-- old bg: 22aa66 -->
+
+        <View
+            android:id="@+id/sbMiddleSeparator"
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:layout_alignBottom="@+id/sboxSearchBtn"
+            android:layout_marginRight="0dp"
+            android:layout_toRightOf="@+id/sboxSearchBtn"
+            android:background="#ffffff" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:layout_alignBottom="@+id/sboxSearchBtn"
+            android:layout_toLeftOf="@+id/sboxSearchBtn"
+            android:background="#ffffff" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/sboxSearchBtn"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/sboxSearchBtn"
+            android:background="#ffffff" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignRight="@+id/sboxSearchBtn"
+            android:layout_below="@+id/sboxSearchBtn"
+            android:background="#ffffff" />
+        <!-- /SEARCH BUTTON -->
+
+
+        <!-- CHANNELS LIST -->
+
+        <com.mmcmahon.rtv2go.channels.HorizontalListView
+            android:id="@+id/lsifaceChannels"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="0dp"
+            android:layout_toRightOf="@+id/sbMiddleSeparator" />
+        <!-- /CHANNELS LIST -->"
+</RelativeLayout>
+<!-- /TOP PANEL -->
+
+        <!-- THUMBNAILS -->
+
+        <Gallery
+            android:id="@+id/lsifaceThumbnails"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/lsifaceBtns"
+            android:spacing="5dp" />
+
+        <TextView
+            android:id="@+id/lsifaceThumbTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/lsifaceThumbnails"
+            android:layout_toLeftOf="@+id/lsifaceBtns"
+            android:background="@color/IFACE_BG"
+            android:gravity="center_horizontal" />
+        <!-- /THUMBNAILS -->
+    </com.mmcmahon.rtv2go.VideoInterface>
+
+</RelativeLayout>

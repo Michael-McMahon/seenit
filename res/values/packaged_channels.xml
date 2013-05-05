@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="packaged_channel_names">
+        <item>All</item>
+        <item>Videos</item>
+        <item>Funny</item>
+        <item>Tech</item>
+        <item>Politics</item>
+        <item>Sports</item>
+        <item>Gaming</item>
+        <item>AWW</item>
+        <item>Music</item>
+        <!-- DOMAIN type channels...item>PBS</item-->
+        <!--item>TED</item-->
+    </string-array>
+
+</resources>
